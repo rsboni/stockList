@@ -12,22 +12,21 @@ export default React.memo((params) => {
   const history = useHistory()
   const { stockCode } = params
   const { pathname } = useLocation()
-
   const displayName = stockCode ? codes.some(code => code.stockCode === stockCode) ? codes.find(c => c.stockCode === stockCode).stockDisplayName : stockCode : ''
 
   return (
     <AppBar color='primary' position='sticky' style={{ height: '64px' }}>
       <Container>
-        <Toolbar>
-          {pathname !== '/'
-            ? <>
-              <IconButton edge='start' color='inherit' aria-label='voltar' onClick={() => history.goBack()}>
-                <ArrowBackIosIcon />
-              </IconButton>
-              <Typography color='inherit'>{displayName}</Typography>
-            </>
-            : <Typography color='inherit'>Stock Quotes Listing</Typography>}
-        </Toolbar>
+        {pathname !== '/'
+          ? <Toolbar>
+            <IconButton edge='start' color='inherit' aria-label='voltar' onClick={() => history.goBack()}>
+              <ArrowBackIosIcon />
+            </IconButton>
+            <Typography color='inherit'>{displayName}</Typography>
+          </Toolbar>
+          : <Toolbar>
+            <Typography color='inherit'>Stock Quotes Listing</Typography>
+          </Toolbar>}
       </Container>
     </AppBar>
   )

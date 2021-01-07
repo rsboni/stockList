@@ -6,9 +6,6 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Chart from './Chart'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-
 
 export default React.memo((props) => {
   const { selectedQuote } = props

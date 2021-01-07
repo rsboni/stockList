@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Route, Switch, useParams } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import WebSocket from './client/WebSocket'
 import StockDetails from './components/StockDetails'
 import useQuotes from './hooks/useQuotes'
@@ -10,7 +10,6 @@ import Paper from '@material-ui/core/Paper'
 import Navbar from './components/Navbar'
 
 function App () {
-  const params = useParams()
   const { quotes, addQuote } = useQuotes()
   const { selectedQuote, setSelectedQuote, updateSelectedQuote } = useSelectedQuote()
   const { message } = WebSocket()
