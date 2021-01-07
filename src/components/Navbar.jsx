@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import IconButton from '@material-ui/core/IconButton'
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
 import codes from '../constants/stocksCodes.json'
 
 export default React.memo((params) => {
@@ -20,7 +20,7 @@ export default React.memo((params) => {
         {pathname !== '/'
           ? <Toolbar>
             <IconButton edge='start' color='inherit' aria-label='voltar' onClick={() => history.goBack()}>
-              <ArrowBackIosIcon />
+              <NavigateBeforeIcon />
             </IconButton>
             <Typography color='inherit'>{displayName}</Typography>
           </Toolbar>
