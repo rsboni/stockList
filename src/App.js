@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { Route } from 'react-router-dom'
+import Paper from '@material-ui/core/Paper'
 import WebSocket from './client/WebSocket'
 import StockDetails from './components/StockDetails'
+import StockList from './components/StockList'
+import Navbar from './components/Navbar'
+import { orderList } from './helpers/functions'
 import useQuotes from './hooks/useQuotes'
 import useSelectedQuote from './hooks/useSelectedQuote'
-import { orderList } from './helpers/functions'
-import StockList from './components/StockList'
-import Paper from '@material-ui/core/Paper'
-import Navbar from './components/Navbar'
 
 function App () {
   const { quotes, addQuote } = useQuotes()
@@ -21,7 +21,7 @@ function App () {
     if (Object.keys(message)[0] === selectedQuote.stockName) {
       updateSelectedQuote(message)
     }
-  }, [message])
+  }, [message, addQuote, selectedQuote, updateSelectedQuote])
 
   return (
     <>
