@@ -23,13 +23,11 @@ export default React.memo((props) => {
     setSelectedQuote(quote)
   }
   return (
-    <Grid item xs={11} sm={5} md={3} lg={3} onClick={handleClick}>
+    <Grid item xs={12} sm={6} md={4} lg={3} onClick={handleClick}>
       <Paper
-        button
         style={{
-          padding: 10,
-          margin: 10,
-          // height: '80%',
+          padding: 5,
+          margin: 5,
           backgroundColor: '#fffb'
         }}
         elevation={1}
