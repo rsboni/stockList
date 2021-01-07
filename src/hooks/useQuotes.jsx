@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { variation } from '../helpers/functions'
 
-export default () => {
+const useQuotes = () => {
   const [quotes, setQuotes] = useState([])
 
   return {
@@ -28,3 +28,5 @@ export default () => {
     }
   }
 }
+
+export default useQuotes

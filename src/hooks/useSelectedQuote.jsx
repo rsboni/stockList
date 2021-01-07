@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { variation } from '../helpers/functions'
 
-export default () => {
+const useSelectedQuote = () => {
   const [selectedQuote, setSelectedQuote] = useState({})
 
   return {
@@ -27,3 +27,5 @@ export default () => {
     }
   }
 }
+
+export default useSelectedQuote
