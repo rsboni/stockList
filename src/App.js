@@ -30,6 +30,7 @@ function App () {
         style={{
           padding: 10,
           margin: 10,
+          minHeight: '90vh',
           height: '100%',
           backgroundColor: '#fafafa'
         }}
