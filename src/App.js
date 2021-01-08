@@ -21,7 +21,7 @@ function App () {
     if (Object.keys(message)[0] === selectedQuote.stockName) {
       updateSelectedQuote(message)
     }
-  }, [message, addQuote, selectedQuote, updateSelectedQuote])
+  }, [message])
 
   return (
     <>
