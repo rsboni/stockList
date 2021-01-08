@@ -13,7 +13,7 @@ export default React.memo((props) => {
       <Container>
         <Grid
           container
-          spacing={0.5}
+          spacing={1}
         >
           {quoteList}
         </Grid>
