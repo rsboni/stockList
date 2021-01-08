@@ -19,7 +19,6 @@ export default React.memo((props) => {
 
   const handleClick = () => {
     history.push(`/${stockName}`)
-    console.log(quote)
     setSelectedQuote(quote)
   }
   return (
